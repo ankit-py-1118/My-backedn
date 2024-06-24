@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
     next();
 });
    app.use(cors({
-        origin: 'https://thriving-haupia-752163.netlify.app',
+        origin: '*',
         credentials: true,  // Enable credentials (cookies, authorization headers) cross-origin
       }));
 
