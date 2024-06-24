@@ -28,9 +28,10 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
-app.use(cors({
-    origin: "*"
-}));
+   app.use(cors({
+        origin: 'https://thriving-haupia-752163.netlify.app',
+        credentials: true,  // Enable credentials (cookies, authorization headers) cross-origin
+      }));
 
 app.use(express.json({ limit: '10MB' }));
 app.use(express.urlencoded({ extended: true }));
